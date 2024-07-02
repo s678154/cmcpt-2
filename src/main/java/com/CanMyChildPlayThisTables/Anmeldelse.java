@@ -18,7 +18,6 @@ public class Anmeldelse {
     }
 
     public Anmeldelse() {
-
     }
 
     public int getVurdering() {

@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Table(name = "TriggerWarning")
 public class TriggerWarning {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,8 +15,19 @@ public class TriggerWarning {
 
     @Column(name = "beskrivelse", nullable = false)
     private String beskrivelse;
-
-    @ManyToMany (mappedBy = "triggerwarnings")
-    private Set<Spill> spilltriggerwarnings;
     //Gettere og settere
+
+
+    public TriggerWarning(String beskrivelse) {
+        this.beskrivelse = beskrivelse;
+    }
+    public TriggerWarning() {}
+
+    public String getBeskrivelse() {
+        return beskrivelse;
+    }
+
+    public void setBeskrivelse(String beskrivelse) {
+        this.beskrivelse = beskrivelse;
+    }
 }

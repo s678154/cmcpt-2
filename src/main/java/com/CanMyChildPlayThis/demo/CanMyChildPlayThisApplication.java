@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CanMyChildPlayThisApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(CanMyChildPlayThisApplication.class, args);
 	}
-
 }

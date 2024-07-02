@@ -17,21 +17,6 @@ public class Sjanger {
     @Column(name = "navn" )
     private String navn;
 
-    @ManyToMany
-    @JoinTable(
-            name = "SpillSjangere",
-            joinColumns = @JoinColumn(name = "sjanger_id"),
-            inverseJoinColumns = @JoinColumn(name = "spill_id"))
-    private Set<Spill> spillsjangere = new HashSet<>();
-
-    public int getSjanger_id() {
-        return sjanger_id;
-    }
-
-    public void setSjanger_id(int sjanger_id) {
-        this.sjanger_id = sjanger_id;
-    }
-
     public String getNavn() {
         return navn;
     }
@@ -40,11 +25,4 @@ public class Sjanger {
         this.navn = navn;
     }
 
-    public Set<Spill> getSpillsjangere() {
-        return spillsjangere;
-    }
-
-    public void setSpillsjangere(Set<Spill> spillsjangere) {
-        this.spillsjangere = spillsjangere;
-    }
 }
