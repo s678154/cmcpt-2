@@ -1,17 +1,32 @@
 body {
     background-color: #041C34;
+    height: 100%;
+    margin: 0;
 }
 
-header {
-    padding: 20px;
-    text-align: center;
-    background-color: #041C34;
+.logo{
+    width: 50px;
+    height: auto;
+}
+
+.outer-container {
+    display: flex; /* Sentrerer containeren horisontalt */
+    align-items: center;     /* Sentrerer containeren vertikalt */
+    height: 100vh;           /* Sørger for at containeren tar full høyde av viewporten */
+}
+.inner-container {
+    display: flex;
+    flex-direction: column; /* Arrangerer barna i en kolonne */
+    align-items: flex-start; /* Plasserer barna til venstre horisontalt */
+    padding-left: 50px;     /* Eventuelt, legg til padding hvis du ønsker litt avstand fra venstre kant */
     color: white;
 }
-header h1 {
+.aligned-header {
     font-size: 24px;
-    color: white;
+    margin: 0;
 }
+.aligned-paragraph {
+    margin: 0;
 
 nav {
     background-color: #041C34 ;
@@ -22,6 +37,15 @@ nav a {
     text-decoration: none;
     margin-right: 20px;
 }
-p {
-    color:white;
+    .nav__links {
+        display: flex;
+        align-items: end;
+    }
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
 }
