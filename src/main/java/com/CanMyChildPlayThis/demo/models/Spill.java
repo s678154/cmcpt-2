@@ -48,13 +48,13 @@ public class Spill {
     @ManyToMany
     @JoinTable(
             name = "SpillTriggerWarnings",
-            joinColumns = @JoinColumn(name = "spill_id"),
-            inverseJoinColumns = @JoinColumn(name = "spill_trigger_warning_id"))
+            joinColumns = @JoinColumn(name = "spill_id", referencedColumnName = "spill_id"),
+            inverseJoinColumns = @JoinColumn(name = "trigger_warning_id", referencedColumnName = "trigger_warning_id"))
     private Set<TriggerWarning> triggerWarningSet = new HashSet<>();
 
     @ManyToMany
     @JoinTable(
-            name = "SpillPlatformer",
+            name = "SpillPlattformer",
             joinColumns = @JoinColumn(name = "spill_id"),
             inverseJoinColumns = @JoinColumn(name = "plattform_id"))
     private Set<Plattform> plattformSet = new HashSet<>();

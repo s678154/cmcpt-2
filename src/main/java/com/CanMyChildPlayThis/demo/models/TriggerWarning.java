@@ -17,6 +17,9 @@ public class TriggerWarning {
     private String beskrivelse;
     //Gettere og settere
 
+    @ManyToMany(mappedBy = "triggerWarningSet")
+    private final Set<Spill> spillSet = new HashSet<>();
+
 
     public TriggerWarning(String beskrivelse) {
         this.beskrivelse = beskrivelse;
