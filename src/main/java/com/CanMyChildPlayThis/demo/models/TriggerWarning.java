@@ -11,26 +11,26 @@ public class TriggerWarning {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "trigger_warning_id")
-    private int trigger_warning_id;
+    private int triggerWarningId;
 
-    @Column(name = "beskrivelse", nullable = false)
-    private String beskrivelse;
-    //Gettere og settere
+    @Column(name = "description", nullable = false)
+    private String description;
 
     @ManyToMany(mappedBy = "triggerWarningSet")
-    private final Set<Spill> spillSet = new HashSet<>();
+    private final Set<Game> gameSet = new HashSet<>();
 
-
-    public TriggerWarning(String beskrivelse) {
-        this.beskrivelse = beskrivelse;
+    public TriggerWarning(String description) {
+        this.description = description;
     }
+
     public TriggerWarning() {}
 
-    public String getBeskrivelse() {
-        return beskrivelse;
+    public String getDescription() {
+        return description;
     }
 
-    public void setBeskrivelse(String beskrivelse) {
-        this.beskrivelse = beskrivelse;
+    public void setDescription(String description) {
+        this.description = description;
     }
+
 }
