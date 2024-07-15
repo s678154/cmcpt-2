@@ -66,7 +66,8 @@ public class Game {
             inverseJoinColumns = @JoinColumn(name = "genre_id"))
     private Set<Genre> genreSet = new HashSet<>();
 
-    public Game(String title, double price, String size, String description, Date releaseDate, String imageUrl, AgeRating ageRating, Producer producer, Review review, Set<TriggerWarning> triggerWarningSet, Set<Platform> platformSet, Set<Genre> genreSet) {
+    public Game(int gameid, String title, double price, String size, String description, Date releaseDate, String imageUrl, AgeRating ageRating, Producer producer, Review review, Set<TriggerWarning> triggerWarningSet, Set<Platform> platformSet, Set<Genre> genreSet) {
+      this.gameId = gameid;
         this.title = title;
         this.price = price;
         this.size = size;
@@ -81,6 +82,14 @@ public class Game {
         this.genreSet = genreSet;
     }
     public Game() {}
+
+    public int getGameId() {
+        return gameId;
+    }
+
+    public void setGameId(int gameId) {
+        this.gameId = gameId;
+    }
 
     public String getTitle() {
         return title;
